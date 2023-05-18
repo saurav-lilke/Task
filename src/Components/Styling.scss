@@ -1,0 +1,107 @@
+.sidebar-component {
+  color: #ffffff;
+  position: absolute;
+  width: 300px;
+  height: 1080px;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(180deg, #04273a 0%, rgba(3, 23, 35, 0.96) 100%);
+  .main {
+    display: flex;
+    flex-direction: column;
+    .one {
+      .react-test {
+        position: relative;
+        width: 142px;
+        height: 36px;
+        left: 79px;
+        top: 40px;
+
+        /* 28 Heading Bold */
+
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+
+        color: #ffffff;
+      }
+    }
+    .two {
+      display: inline-flex;
+      flex-direction: column;
+      .dashboard {
+        margin-top: 80px;
+      }
+      .montages {
+        margin-top: 49px;
+      }
+      .credits {
+        margin-top: 49px;
+      }
+    }
+    .three {
+      margin-top: 450px;
+      height: 145px;
+      width: 248px;
+      margin-left: 26px;
+      background-color: #908e8ec0;
+      // padding: 20px;
+    }
+  }
+}
+
+.main-component {
+  background: #f5f6fa;
+  .header {
+    .header-text {
+    }
+    .stepper {
+      margin: 140px 56px 40px 356px;
+      width: 1508px;
+      height: 137px;
+      left: 356px;
+      top: 140px;
+      background: #ffffff;
+      border-radius: 8px;
+      display: flex;
+      .upload-edf-btn {
+        padding: 39px 0 72px 275px;
+      }
+      .map-channel-btn {
+        padding: 39px 0 72px 275px;
+      }
+      .save-preview-btn {
+        padding: 39px 0 72px 275px;
+      }
+    }
+  }
+  .body {
+    .center-box {
+      width: 1444px;
+      height: 506px;
+      background: #f8f8f8;
+      border: 1.5px dashed #8a8a8a;
+      border-radius: 5px;
+      margin: 72px 88px 72px 388px;
+    }
+  }
+  .footer {
+    display: flex;
+    width: 1620px;
+    height: 112px;
+    margin-left: 300px;
+    top: 927px;
+
+    background: #ffffff;
+    .back-btn {
+      margin: 43px 0 43px 123.5px;
+    }
+    .next-btn {
+      margin: 43px 0 43px 1282px;
+    }
+  }
+}
