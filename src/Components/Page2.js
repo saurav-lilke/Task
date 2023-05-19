@@ -17,11 +17,45 @@ const Page2 = () => {
   ];
 
   const [dropdown1, setdropdown1] = useState({ primary: "", secondary: "" });
+  const [dropdown2, setdropdown2] = useState({ primary: "", secondary: "" });
+  const [dropdown3, setdropdown3] = useState({ primary: "", secondary: "" });
+  const [dropdown4, setdropdown4] = useState({ primary: "", secondary: "" });
+  const [dropdown5, setdropdown5] = useState({ primary: "", secondary: "" });
+
   const handleChange1 = (value, specificValueForDropdown) => {
     if (specificValueForDropdown === "primary") {
       setdropdown1({ ...dropdown1, primary: value });
     } else {
       setdropdown1({ ...dropdown1, secondary: value });
+    }
+  };
+  const handleChange2 = (value, specificValueForDropdown) => {
+    if (specificValueForDropdown === "primary") {
+      setdropdown2({ ...dropdown1, primary: value });
+    } else {
+      setdropdown2({ ...dropdown1, secondary: value });
+    }
+  };
+  const handleChange3 = (value, specificValueForDropdown) => {
+    if (specificValueForDropdown === "primary") {
+      setdropdown3({ ...dropdown1, primary: value });
+    } else {
+      setdropdown3({ ...dropdown1, secondary: value });
+    }
+  };
+  const handleChange4 = (value, specificValueForDropdown) => {
+    if (specificValueForDropdown === "primary") {
+      setdropdown4({ ...dropdown1, primary: value });
+    } else {
+      setdropdown4({ ...dropdown1, secondary: value });
+    }
+  };
+  const handleChange5 = (value, specificValueForDropdown) => {
+    debugger;
+    if (specificValueForDropdown === "primary") {
+      setdropdown5({ ...dropdown1, primary: value });
+    } else {
+      setdropdown5({ ...dropdown1, secondary: value });
     }
   };
 
@@ -55,16 +89,16 @@ const Page2 = () => {
           <div className="dropdown1">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
-              specificValueForDropdown="secondary"
+              value={dropdown2.primary}
+              onChange={handleChange2}
+              specificValueForDropdown="primary"
             />
           </div>
           <div className="dropdown2">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
+              value={dropdown2.secondary}
+              onChange={handleChange2}
               specificValueForDropdown="secondary"
             />
           </div>
@@ -75,16 +109,16 @@ const Page2 = () => {
           <div className="dropdown1">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
-              specificValueForDropdown="secondary"
+              value={dropdown3.primary}
+              onChange={handleChange3}
+              specificValueForDropdown="primary"
             />
           </div>
           <div className="dropdown2">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
+              value={dropdown3.secondary}
+              onChange={handleChange3}
               specificValueForDropdown="secondary"
             />
           </div>
@@ -95,16 +129,16 @@ const Page2 = () => {
           <div className="dropdown1">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
-              specificValueForDropdown="secondary"
+              value={dropdown4.primary}
+              onChange={handleChange4}
+              specificValueForDropdown="primary"
             />
           </div>
           <div className="dropdown2">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
+              value={dropdown4.secondary}
+              onChange={handleChange4}
               specificValueForDropdown="secondary"
             />
           </div>
@@ -115,16 +149,16 @@ const Page2 = () => {
           <div className="dropdown1">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
-              specificValueForDropdown="secondary"
+              value={dropdown5.primary}
+              onChange={handleChange5}
+              specificValueForDropdown="primary"
             />
           </div>
           <div className="dropdown2">
             <Dropdown
               dropdownOptions={dropdownOptions}
-              value={dropdown1.secondary}
-              onChange={handleChange1}
+              value={dropdown5.secondary}
+              onChange={handleChange5}
               specificValueForDropdown="secondary"
             />
           </div>
