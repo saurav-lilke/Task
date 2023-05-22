@@ -1,8 +1,17 @@
 import React from "react";
-import { Button } from "@mui/material";
 import LibraryBooksSharp from "@mui/icons-material/LibraryBooksSharp";
+import Footer from "../ResuableComponents/Footer";
+import { useNavigate } from "react-router-dom";
 
-const Page1 = () => {
+const Page1 = ({ pageNumber, setPageNumber }) => {
+  const navigate = useNavigate();
+  const onBackClick = () => {
+    // navigate(`/page${pageNumber - 1}`);
+  };
+  const onNextClick = () => {
+    setPageNumber(2);
+    navigate(`/page${2}`);
+  };
   return (
     <>
       <div className="page1">
@@ -17,6 +26,11 @@ const Page1 = () => {
           </div>
         </div>
       </div>
+      <Footer
+        onBackClick={onBackClick}
+        onNextClick={onNextClick}
+        backButtonDisabled={true}
+      />
     </>
   );
 };

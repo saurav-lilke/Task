@@ -6,7 +6,7 @@ import Dashboard from "@mui/icons-material/Dashboard";
 import MonitorHeart from "@mui/icons-material/MonitorHeart";
 import MonetizationOn from "@mui/icons-material/MonetizationOn";
 
-const Sidebar = () => {
+const Sidebar = ({ pageNumber, setPageNumber }) => {
   return (
     <div className="main">
       <div className="one">

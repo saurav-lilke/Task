@@ -3,25 +3,14 @@ import { React, useState } from "react";
 import "./Styling.scss";
 import { useNavigate } from "react-router-dom";
 // import useNavigate from 'react-dom'
-import BodyComponent from "../routes";
+import BodyComponent from "./BodyComponent";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 
-const MainComponent = () => {
-  const [pageNumber, setPageNumber] = useState(1);
+const MainComponent = ({ pageNumber, setPageNumber }) => {
   const navigate = useNavigate();
-  const onBackClick = () => {
-    if (pageNumber > 1) {
-      navigate(`/page${pageNumber - 1}`);
-      setPageNumber(pageNumber - 1);
-    }
-  };
+  const onBackClick = () => {};
 
-  const onNextClick = () => {
-    if (pageNumber < 5) {
-      navigate(`/page${pageNumber + 1}`);
-      setPageNumber(pageNumber + 1);
-    }
-  };
+  const onNextClick = () => {};
   return (
     <>
       <div className="header">
@@ -36,50 +25,39 @@ const MainComponent = () => {
         </div>
 
         <div className="stepper">
-          <div className="upload-edf-btn">
+          <div className={`upload-edf-btn ${pageNumber === 1 ? "active" : ""}`}>
             <div class="numberCircle">
               <div className="number-span">1</div>
             </div>
-            <div variant={"contained"}>Upload EDFs</div>
+            <div className="text">Upload EDFs</div>
           </div>
           <div className="line"></div>
-          <div className="map-channel-btn">
+          <div
+            className={`map-channel-btn ${pageNumber === 2 ? "active" : ""}`}
+          >
             <div class="numberCircle">
               <div className="number-span">2</div>
             </div>
-            <div variant={"contained"}>Map Channels</div>
+            <div className="text">Map Channels</div>
           </div>
           <div className="line"></div>
-          <div className="save-preview-btn">
+          <div
+            className={`save-preview-btn ${pageNumber === 3 ? "active" : ""}`}
+          >
             <div class="numberCircle">
               <div className="number-span">3</div>
             </div>
-            <div variant={"contained"}>Save & Preview</div>
+            <div className="text">Save & Preview</div>
           </div>
         </div>
       </div>
       <div className="body">
-        <BodyComponent />
-      </div>
-      <div className="footer">
-        <div className="back-btn">
-          <Button
-            className="back-button"
-            variant={"contained"}
-            onClick={onBackClick}
-          >
-            Back
-          </Button>
-        </div>
-        <div className="next-btn">
-          <Button
-            className="dshfbsdkh"
-            variant={"contained"}
-            onClick={onNextClick}
-          >
-            Next
-          </Button>
-        </div>
+        <BodyComponent
+          onBackClick={onBackClick}
+          onNextClick={onNextClick}
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+        />
       </div>
     </>
   );
